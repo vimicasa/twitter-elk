@@ -1,0 +1,32 @@
+{
+	"index_patterns": "twitter_task3",
+	"mappings": {
+		"tweets": {
+			"properties": {
+				"@timestamp": {
+					"type": "date",
+					"format": "dateOptionalTime"
+				},
+				"text": {
+					"type": "text"
+				},
+				"user": {
+					"type": "object",
+					"properties": {
+						"description": {
+							"type": "text"
+						}
+					}
+				},
+				"coordinates": {
+					"type": "object",
+					"properties": {
+						"coordinates": {
+							"type": "geo_point"
+						}
+					}
+				}
+			}
+		}
+	}
+}
